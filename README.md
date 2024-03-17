@@ -34,5 +34,8 @@ FLOW CHART:
 TECHSTACKS USED:
 python, yolov3, open cv, geocoder, scrp,tesseract ocr
 
+HOW TO RUN LOCALLY:
+
+
 
 
