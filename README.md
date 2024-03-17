@@ -35,6 +35,10 @@ TECHSTACKS USED:
 python, yolov3, open cv, geocoder, scrp,tesseract ocr
 
 HOW TO RUN LOCALLY:
+This project consists of detecting fire,weapons and people detection in order to check the count of people to chack if they have any weapons as well as is there any forest fire caught up.In order to run it follow the commands,
+        python fire.py
+        python weapon.py
+        python mail.py
 
 
 
