@@ -2,6 +2,7 @@ FOREST RESERVATION
 
 
 Team Details
+
 Team number : VH009
 
 Name	Email
@@ -73,6 +74,10 @@ Agriculture:
 Environmental Science:
         Ecological monitoring for biodiversity assessment
         Pollution detection for environmental protection
+
+DECLARATION:
+        We confirm that project ynder went signifiicat changes and was developed with more innovative ideas entirely during the hackathon within the the given timeframe.
+Thank You.
 
 
 
