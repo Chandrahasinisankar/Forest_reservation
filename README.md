@@ -12,7 +12,7 @@ DEMO VIDEO:
 ![VIDEO](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/Forest%20Reservation%20Project.mp4)
 
 
-
+PICTURES:
 
 ![Architecture](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/ARCHITECTURE.png)
 ![Methodology](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/METHODOLOGY.png)
