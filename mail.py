@@ -1,7 +1,3 @@
-
-
-
-from ctypes import _NamedFuncPointer
 from email.mime.application import MIMEApplication
 import smtplib
 from email.mime.text import MIMEText
@@ -31,7 +27,7 @@ def format_exif_tags(exif_tags):
     return "\n".join(f"{tag}: {value}" for tag, value in exif_tags.items())
 
 def send_email(subject, body, to_email, app_password, attachment_path):
-    email = 'sahanaganesh501@gmail.com'  # Update with your email
+    email = 'sankarchandrahasini@gmail.com'  # Update with your email
     message = MIMEMultipart()
     message['From'] = email
     message['To'] = to_email
@@ -72,11 +68,11 @@ def send_email(subject, body, to_email, app_password, attachment_path):
         except smtplib.SMTPException as e:
             print(f"SMTP Exception: {e}")
 
-if _NamedFuncPointer == "_main_":
-    app_password = "mpya dlgd vfcg hrcv"  # Update with your app password
+if __name__ == "__main__":
+    app_password = "iyyz zjym xvib cygy"  # Update with your app password
     subject = "scrapped information"
     body = ""  # Leave body empty for now
-    recipient_email = "sahanag.csbs2022@citchennai.net"
+    recipient_email = "chandrahasinis.csbs2022@citchennai.net"
     attachment_path = input(r"Enter the path to the image file: ")  # Make sure this points to an image file
     send_email(subject, body, recipient_email, app_password, attachment_path)
 #chandrahasinis.csbs2022@citchennai.net
