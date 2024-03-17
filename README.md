@@ -36,9 +36,30 @@ python, yolov3, open cv, geocoder, scrp,tesseract ocr
 
 HOW TO RUN LOCALLY:
 This project consists of detecting fire,weapons and people detection in order to check the count of people to chack if they have any weapons as well as is there any forest fire caught up.In order to run it follow the commands,
+        
         python fire.py
+        
         python weapon.py
+        
         python mail.py
+
+WHAT'S NEXT:
+
+Disaster Management:
+        Emergency response in natural disasters
+        Disease surveillance for outbreak monitoring
+Crime Detection and Investigation:
+
+Surveillance in high-crime areas:
+         Forensic analysis of crime scenes
+
+Agriculture:
+        Crop monitoring for disease detection
+        Precision agriculture for optimized resource use
+
+Environmental Science:
+        Ecological monitoring for biodiversity assessment
+        Pollution detection for environmental protection
 
 
 
