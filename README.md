@@ -22,7 +22,12 @@ SOLUTION:
 ABOUT THE PROJECT:
      This innovative project addresses the need for advanced data analysis in environmental monitoring by combining aviationtechnology with image scraping methodologies.
 As modern challenges such as illegal activities, like smuggling valuable forest products, threatens forest preservation worldwide.The proposed solution involves deploying Aviations equipped with high-resolution cameras and environmental sensors to capture aerial imagery over specific regions.
+
+TECHNICAL IMPLEMENTATION:
 By integrating image scraping techniques into the analysis pipeline, the captured images undergo computer vision and machine learning algorithms to extract pertinent details such as changes in vegetation health, wildlife patterns, and landscape alterations.
 The project also emphasizes the importance of addressing legal and ethical considerations surrounding aviation usage and data scraping, ensuring compliance with regulations and privacy standards.
+FLOW CHART:
+![Flow Chart](image link)
+
 
 
