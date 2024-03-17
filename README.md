@@ -43,6 +43,8 @@ This project consists of detecting fire,weapons and people detection in order to
         
         python mail.py
 
+        python ppldetec.py
+
 WHAT'S NEXT:
 
 Disaster Management:
