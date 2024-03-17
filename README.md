@@ -76,9 +76,11 @@ Environmental Science:
         Pollution detection for environmental protection
 
 CONCLUSION:
+
         Hence this project acts as an aid for the forest reservation,to safe guard animals as well as trees to make our world a better place to live in.
 
 DECLARATION:
+
         We confirm that project ynder went signifiicat changes and was developed with more innovative ideas entirely during the hackathon within the the given timeframe.
 Thank You.
 
