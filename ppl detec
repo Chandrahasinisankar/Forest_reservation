@@ -1,0 +1,101 @@
+import cv2
+import tkinter as tk
+from PIL import Image, ImageTk
+import numpy as np
+
+class PeopleDetectionApp:
+    def __init__(self, root, video_source=0):
+        self.root = root
+        self.root.title("People Detection")
+        self.video_source = video_source
+
+        self.cap = cv2.VideoCapture(self.video_source)
+
+        self.canvas = tk.Canvas(root)
+        self.canvas.pack()
+
+        self.label_count = tk.Label(root, text="People Count: 0", font=("Helvetica", 16))
+        self.label_count.pack()
+
+        self.btn_quit = tk.Button(root, text="Quit", command=self.quit)
+        self.btn_quit.pack(side=tk.BOTTOM)
+
+        self.detect_people()
+
+    def detect_people(self):
+        ret, frame = self.cap.read()
+        if ret:
+            people_count = self.detect_people_yolo(frame)
+
+            # Display the frame with OpenCV and update the Tkinter canvas
+            img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            img = Image.fromarray(img)
+            img = ImageTk.PhotoImage(image=img)
+
+            self.canvas.config(width=img.width(), height=img.height())
+            self.canvas.create_image(0, 0, anchor=tk.NW, image=img)
+            self.canvas.img = img
+
+            # Update the people count label
+            self.label_count.config(text=f"People Count: {people_count}")
+
+            # Print the people count to the console
+            print(f"People Count: {people_count}")
+
+            # Repeat the detection after a delay (adjust delay based on your needs)
+            self.root.after(10, self.detect_people)
+        else:
+            self.quit()
+
+    def detect_people_yolo(self, frame):
+        net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+        with open("coco.names", "r") as f:
+            classes = f.read().strip().split("\n")
+
+        height, width, _ = frame.shape
+        net.setInput(cv2.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False))
+        outs = net.forward(net.getUnconnectedOutLayersNames())
+
+        people_count = 0
+        confidences = []
+        boxes = []
+
+        for out in outs:
+            for detection in out:
+                scores = detection[5:]
+                class_id = np.argmax(scores)
+                confidence = scores[class_id]
+                if confidence > 0.7 and classes[class_id] == "person":
+                    center_x = int(detection[0] * width)
+                    center_y = int(detection[1] * height)
+                    w = int(detection[2] * width)
+                    h = int(detection[3] * height)
+
+                    x = int(center_x - w / 2)
+                    y = int(center_y - h / 2)
+
+                    boxes.append([x, y, x + w, y + h])
+                    confidences.append(float(confidence))
+
+        if boxes and confidences:
+            indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
+
+            for i in indices:
+                i = i.item()
+                box = boxes[i]
+                x, y, x2, y2 = box
+                cv2.rectangle(frame, (x, y), (x2, y2), (0, 255, 0), 2)
+                people_count += 1
+
+        return people_count
+
+    def quit(self):
+        self.cap.release()
+        self.root.destroy()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = PeopleDetectionApp(root)
+    root.mainloop()
+
+
