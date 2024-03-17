@@ -17,6 +17,11 @@ PICTURES:
 ![Architecture](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/ARCHITECTURE.png)
 ![Methodology](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/METHODOLOGY.png)
 
+
+SAMPLE PICTUURES FOR DETECTION:
+![SAMPLE](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/c.jpg)
+![sAMPLE](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/a.jpg)
+
 PROBLEM STATEMENT:
         The increase in illegal activities, like smuggling valuable forest products, threatens forest preservation worldwide. Detecting and stopping these activities is challenging due to their covert nature. 
         
