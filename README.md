@@ -32,11 +32,7 @@ FLOW CHART:
 ![Flow Chart](https://github.com/Chandrahasinisankar/Forest_reservation/blob/main/Environmental%20detection.png)
 
 TECHSTACKS USED:
-1.python 
-2.yolov3
-3.open cv
-3.geocoder 
-4.scrp
+python, yolov3, open cv, geocoder, scrp,tesseract ocr
 
 
 
